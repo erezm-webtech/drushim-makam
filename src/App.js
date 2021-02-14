@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
        <div className="App">
-      <Navbar />
+       <Navbar />
+       <Highlights />
       <Switch>
-        <Route path="/" exact component={Highlights}></Route>
         <Route path="/jobs" exact component={Jobs}></Route>
         <Route path="/jobs/:name" component={Jobs}></Route>
       </Switch>

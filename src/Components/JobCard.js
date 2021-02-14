@@ -14,22 +14,22 @@ export default function JobCard({name}) {
     <Card className="job-card">
       <CardContent>
         <Typography className="job-card-title" color="textSecondary" gutterBottom>
-        {`${name} Position`}
+        {`משרה ב- ${name}`}
         </Typography>
         <Typography variant="h5" component="h2">
-        Job Title
+        כותרת המשרה
         </Typography>
         <Typography className="job-card-pos" color="textSecondary">
-          description
+          פירט על המשרה
         </Typography>
         <Typography variant="body2" component="p">
-        requeiremtns
+        דרישות
           <br />
         
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button size="small">עוד</Button>
       </CardActions>
     </Card>
   );

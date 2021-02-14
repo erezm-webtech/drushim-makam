@@ -9,16 +9,22 @@ import {Link} from 'react-router-dom';
 
 export default function Highlights() {
   const [job, setJob] = useState("");
+
+
+  const showDetails = (job) => {
+    setJob(job);
+    window.location = `/jobs/${job}`;
+  }
   return (
       <div className="search-area">
     <Autocomplete
-    onChange={(event, value) => setJob(value.title)}
+    onChange={(event, value) => showDetails(value.title)}
       id="highlights-demo"
       style={{ width: 300 }}
       options={jobs}
       getOptionLabel={(option) => option.title}
       renderInput={(params) => (
-        <TextField {...params} label="Jobs" variant="outlined" margin="normal" />
+        <TextField {...params} label="משרות" variant="outlined" margin="normal" />
       )}
       renderOption={(option, { inputValue }) => {
         const matches = match(option.title, inputValue);
@@ -35,9 +41,7 @@ export default function Highlights() {
         );
       }}
     />
-    <Link to={`/jobs/${job}`} >
-       <Button variant="contained">Search</Button>
-    </Link>
+
 
 </div>
     
@@ -46,12 +50,12 @@ export default function Highlights() {
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const jobs = [
-  { title: 'Software Enginner' },
-  { title: 'Mobile Enginner' },
-  { title: 'Devops' },
-  { title: 'QA Automate' },
-  { title: 'FullStack Developer'},
-  { title: "Php Developer" },
-  { title: 'iOS Developer'},
-  { title: 'Android Developer'}
+  { title: 'מהדנס תוכנה' },
+  { title: 'מהנדס אפליקציות' },
+  { title: 'איש סיסטם' },
+  { title: 'בודק אוטומציה' },
+  { title: 'FullStack מפתח'},
+  { title: "Php מפתח" },
+  { title: 'iOS מפתח'},
+  { title: 'Android מפתח'}
 ];

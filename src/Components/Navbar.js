@@ -7,7 +7,7 @@ function Navbar() {
         <div className="navbar">
             <ul>
             <Link to={`/`} className="link">
-             <li>Home</li>
+             <li>בית</li>
              </Link>
             </ul>
         </div>
