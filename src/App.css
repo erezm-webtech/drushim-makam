@@ -1,3 +1,7 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +9,54 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.navbar {
+  background-color: #021e39;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar li {
+  color: white;
+  list-style: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.search-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+}
+
+
+.job-card {
+  min-width: 275px;
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f5fd !important;
+}
+
+.job-card-title {
+  font-size: 14px;
+}
+
+.job-card-pos {
+  margin-bottom: 12px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
